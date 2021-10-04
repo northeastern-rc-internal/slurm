@@ -1519,6 +1519,7 @@ typedef struct job_descriptor {	/* For submit, allocate, and update requests */
 	char *cluster_features;	/* required cluster feature specification,
 				 * default NONE */
 	char *comment;		/* arbitrary comment */
+	char *constraint;	/* arbitrary string job constraint */
 	uint16_t contiguous;	/* 1 if job requires contiguous nodes,
 				 * 0 otherwise,default=0 */
 	char *container;	/* OCI container bundle */
