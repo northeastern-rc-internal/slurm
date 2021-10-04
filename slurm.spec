@@ -1,7 +1,6 @@
 Name:		slurm
 Version:	21.08.1
-%define rel	1
-%define dist	nurc2
+%define rel	1nurc3
 Release:	%{rel}%{?dist}
 Summary:	Slurm Workload Manager
 
@@ -16,7 +15,7 @@ URL:		https://slurm.schedmd.com/
 %global slurm_source_dir %{name}-%{version}-%{rel}
 %endif
 
-Source:		%{slurm_source_dir}.tar.bz2
+Source:		%{slurm_source_dir}.tar.gz
 
 # build options		.rpmmacros options	change to default action
 # ====================  ====================	========================
