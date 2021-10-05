@@ -905,6 +905,12 @@ slurm_sprint_job_info ( job_info_t * job_ptr, int one_liner )
 		xstrfmtcat(out, "Comment=%s ", job_ptr->comment);
 	}
 
+	/****** Line (optional) ******/
+	if (job_ptr->constraint) {
+		xstrcat(out, line_end);
+		xstrfmtcat(out, "Constraint=%s ", job_ptr->constraint);
+	}
+
 	/****** Line 30 (optional) ******/
 	if (job_ptr->batch_flag) {
 		xstrcat(out, line_end);

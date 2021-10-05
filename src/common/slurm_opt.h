@@ -340,6 +340,7 @@ typedef struct {
 	uint32_t priority;		/* --priority			*/
 	char *account;			/* --account			*/
 	char *comment;			/* --comment			*/
+	char *constraint;		/* --constraint 		*/
 	char *qos;			/* --qos			*/
 	int immediate;			/* --immediate			*/
 	uint16_t warn_flags;		/* --signal=flags:<int>@<time>	*/
@@ -370,7 +371,6 @@ typedef struct {
 	uint64_t mem_per_gpu;		/* --mem-per-gpu		*/
 	uint64_t pn_min_memory;		/* --mem			*/
 	uint64_t pn_min_tmp_disk;	/* --tmp			*/
-	char *constraint;		/* --constraint			*/
 	char *c_constraint;		/* --cluster-constraint		*/
 	char *gres;			/* --gres			*/
 	char *container;		/* --container			*/
