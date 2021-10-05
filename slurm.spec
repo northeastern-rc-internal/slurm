@@ -1,6 +1,6 @@
 Name:		slurm
 Version:	21.08.1
-%define rel	1nurc7
+%define rel	1nurc8
 Release:	%{rel}%{?dist}
 Summary:	Slurm Workload Manager
 
@@ -10,12 +10,14 @@ URL:		https://slurm.schedmd.com/
 
 # when the rel number is one, the directory name does not include it
 %if "%{rel}" == "1"
-%global slurm_source_dir %{name}-%{version}
+%global slurm_version %{version}
 %else
-%global slurm_source_dir %{name}-%{version}-%{rel}
+%global slurm_version %{version}-%{rel}
 %endif
+%global slurm_source_dir %{name}-%{slurm_version}
 
-Source:		%{slurm_source_dir}.tar.gz
+
+Source:		%{slurm_version}.tar.gz
 
 # build options		.rpmmacros options	change to default action
 # ====================  ====================	========================
@@ -331,7 +333,7 @@ notifies slurm about failed nodes.
 
 %prep
 # when the rel number is one, the tarball filename does not include it
-%setup -n slurm-%{slurm_source_dir}
+%setup -n %{slurm_source_dir}
 
 %build
 %configure \
