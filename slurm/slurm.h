@@ -1706,6 +1706,7 @@ typedef struct job_info {
 	char *command;		/* command to be executed, built from submitted
 				 * job's argv and NULL for salloc command */
 	char *comment;		/* arbitrary comment */
+	char *constraint;	/* arbitrary constraint */
 	char *container;	/* OCI Container bundle path */
 	uint16_t contiguous;	/* 1 if job requires contiguous nodes */
 	uint16_t core_spec;	/* specialized core count */
