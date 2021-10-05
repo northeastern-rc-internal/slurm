@@ -331,7 +331,7 @@ notifies slurm about failed nodes.
 
 %prep
 # when the rel number is one, the tarball filename does not include it
-%setup -n %{slurm_source_dir}
+%setup -n slurm-%{slurm_source_dir}
 
 %build
 %configure \
