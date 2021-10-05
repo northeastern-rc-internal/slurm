@@ -1,6 +1,6 @@
 Name:		slurm
 Version:	21.08.1
-%define rel	1nurc8
+%define rel	1nurc9
 Release:	%{rel}%{?dist}
 Summary:	Slurm Workload Manager
 
