@@ -5932,6 +5932,7 @@ extern job_desc_msg_t *slurm_opt_create_job_desc(slurm_opt_t *opt_local,
 	job_desc->clusters = xstrdup(opt_local->clusters);
 	job_desc->cluster_features = xstrdup(opt_local->c_constraint);
 	job_desc->comment = xstrdup(opt_local->comment);
+	job_desc->constraint = xstrdup(opt_local->constraint);
 	job_desc->req_context = xstrdup(opt_local->context);
 
 	if (set_defaults || slurm_option_isset(opt_local, "contiguous"))

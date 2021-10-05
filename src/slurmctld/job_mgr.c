@@ -7623,6 +7623,7 @@ static int _test_job_desc_fields(job_desc_msg_t * job_desc)
 	    _test_strlen(job_desc->array_inx, "array_inx", 1024 * 4)	||
 	    _test_strlen(job_desc->burst_buffer, "burst_buffer",1024*8) ||
 	    _test_strlen(job_desc->comment, "comment", 1024)		||
+	    _test_strlen(job_desc->constraint, "constraint", 1024)	||
 	    _test_strlen(job_desc->cpu_bind, "cpu-bind", 1024 * 128)	||
 	    _test_strlen(job_desc->cpus_per_tres, "cpus_per_tres", 1024)||
 	    _test_strlen(job_desc->dependency, "dependency", 1024*128)	||
@@ -18082,6 +18083,7 @@ extern job_desc_msg_t *copy_job_record_to_job_desc(job_record_t *job_ptr)
 	job_desc->bitflags 	    = job_ptr->bit_flags;
 	job_desc->clusters          = xstrdup(job_ptr->clusters);
 	job_desc->comment           = xstrdup(job_ptr->comment);
+	job_desc->constraint	    = xstrdup(job_ptr->constraint);
 	job_desc->container = xstrdup(job_ptr->container);
 	job_desc->contiguous        = details->contiguous;
 	job_desc->core_spec         = details->core_spec;
